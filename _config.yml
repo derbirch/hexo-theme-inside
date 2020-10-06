@@ -5,37 +5,36 @@
 # Appearance
 appearance:
   # Accent color, default '#2a2b33'
-  accent_color:
+  accent_color: '#6699CC'
   # Font color, default '#363636'
-  foreground_color:
+  foreground_color: '#333333'
   # Border color, default '#e0e0e0'
   border_color:
   # body background, default '#f5f7fa'
   background:
   # Sidebar background (when opened), default to accent_color
-  sidebar_background:
+  sidebar_background: "#6699CC linear-gradient(to bottom,#66CCCC 0%,#6699CC 100%)"
   # Card background, default '#fff'
   card_background:
-
   # All background settings above support image, e.g.,
   # '//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png #f5f7fa' or
   # 'url(//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png) #f5f7fa'
 
   # Maximum width of content
-  # content_width: 640
+  content_width: 850
 
   # Fonts
   font:
-    # Url of font css file
-    # Below is a font set containing Baloo Bhaijaan, Josefin Sans, Montserrat and Inconsolata from Google Fonts.
-    url: //fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
+    # Url of font css file fonts.googleapis.com/css?family=IBM+Plex+Mono|Noto+Sans+SC|Oxanium
+    # Below is a font set containing Baloo Bhaijaan, Josefin Sans, Montserrat and Inconsolata from Google Fonts. fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Noto+Sans+SC:wght@500&family=Oxanium&display=swap&family=Noto+Serif+SC:wght@900&display=swap
+    url: //cdn.wardzhou.art/lib/font.css
 
     # Base font which applied to body
-    base: "'Josefin Sans', 'PingFang SC'"
+    base: "'IBM Plex Mono', 'Noto Sans SC'"
     # Sidebar author font, fallback to `base`
-    logo:
+    logo: "'Noto Serif SC'"
     # Sidebar menu font, fallback to `base`
-    menu: 'Baloo Bhaijaan'
+    menu: 'IBM Plex Mono'
     # Font for:
     # - percentage on the fab button
     # - month text on archives page
@@ -44,11 +43,11 @@ appearance:
     # - toc index
     # - category pill
     # fallback to `base`
-    label: Montserrat
+    label: "'Oxanium'"
     # Headline(h1, h2, h3, h4, h5, h6) font, fallback to `base`
-    heading:
+    heading: "'IBM Plex Mono-SemiBold','Noto Sans SC-Medium'"
     # Code and code block
-    code: Inconsolata, monospace
+    code: "'IBM Plex Mono', 'Noto Sans SC'"
     # Base font for printing which applied to body
     print:
 
@@ -56,7 +55,12 @@ appearance:
   # Uses an architecture called "base16" (https://github.com/chriskempson/base16),
   # the default theme is a customized Atelier Dune Light theme,
   # please feel free to explore more.
-  highlight:
+  highlight: [
+  '#263238', '#2c393f', '#37474f', '#707880',
+  '#c9ccd3', '#cdd3de', '#d5dbe5', '#ffffff',
+  '#ec5f67', '#ea9560', '#ffcc00', '#8bd649',
+  '#80cbc4', '#89ddff', '#82aaff', '#ec5f67'
+  ]
 
   # Default Light by Chris Kempson (http://chriskempson.com)
   # highlight: [
@@ -86,16 +90,20 @@ appearance:
 profile:
   # `email` is used for gravatar(https://en.gravatar.com),
   # fallback to `hexo.config.email` if not specified
-  email:
+  email: wardzhou@outlook.com
 
   # You can set Avatar URL directly
-  # avatar:
+  avatar: https://wardzhou.art/img/avatar.jpeg
 
-  bio: Awesome guy.
+  bio: '> '
 
 # Sidebar navigation links
 menu:
-  Home: /
+  🏠 Home: /
+  📰 Works: /context
+  🔍 Search: /search
+  🧭 Resource: /resource
+  🌈 About: /about
   # About: /about
   # Links: /links
   # Github: https://github.com/username
@@ -108,10 +116,10 @@ sns:
   # If you use hexo-generator-feed, `sns.feed` can be left blank
   # and the theme will try to get `hexo.config.feed.path`.
   feed:
-  github:
+  github: https://github.com/derbirch
   twitter:
   facebook:
-  instagram:
+  instagram: https://www.instagram.com/nanyuzhou/
   tumblr:
   dribbble:
   telegram:
@@ -123,23 +131,24 @@ sns:
   myspace:
   weibo:
   qq:
+  ao3: https://archiveofourown.org/users/orangeShirt
+  behance: https://www.behance.net/wardzhou/
 
 # Sidebar footer copyright info
 footer:
   # Set to false to hide.
   # copyright: '&copy; 2019 • <a href="">John Doe</a>'
-
+  copyright: '&copy; 2020 🍉 WardZhou'
   # Set to false to hide Hexo link.
   # powered: false
-
+  powered: false
   # Set to false to hide theme link.
   # theme: false
-
+  theme: false
   # Custom text.
   # custom: Hosted by <a target="_blank" rel="external nofollow"
   #   href="https://pages.github.com/"><b>Github Pages</b></a>
-
-
+  custom: <span id="busuanzi_container_site_uv" style='display:none'>Total <span id="busuanzi_value_site_uv"></span> visitors. </span><span id="busuanzi_container_site_pv" style='display:none'><span id="busuanzi_value_site_pv"></span> Views.</span><br/><a href="http://beian.miit.gov.cn/" target="_Blank">辽ICP备20002645号</a>
 # ---------------------------------------------------------------
 # Content
 # ---------------------------------------------------------------
@@ -153,21 +162,20 @@ page:
   # reward: true
 
   # Display copyright notice, default to `false`
-  # copyright: true
+   copyright: true
 
 
 # Post
 post:
   # per_page: 10
-  # reading_time: false
-  # reading_time:
-  #   wpm: 150
-  #   text: ":words words in :minutes min"
 
   # The following settings are the same as the page
   # toc: false
-  # reward: true
-  # copyright: true
+    reading_time:
+        wpm: 150
+        text: ":words words in :minutes min"
+    reward: true
+    copyright: true
 
 # Archive
 archive:
@@ -184,18 +192,18 @@ category:
 # Search
 search:
   # Display a quick search button in fab
-  # fab: true
+   fab: true
 
   # Render a standalone searh page which can be configured in sidebar menu such as `Search: /search`
-  # page: true
+   page: true
 
   # Local search
-  # adapter:
-  #   range:
-  #     - post
-  #     - page
-  #   per_page: 20
-  #   limit: 10000
+   adapter:
+     range:
+       - post
+       - page
+     per_page: 20
+     limit: 10000
 
   # Custom search
   # adapter:
@@ -252,7 +260,23 @@ toc:
 reward:
   # Text which shows at the top.
   # text: Buy me a cup of coffee ☕.
-
+  text: Buy me snacks 🍩.
+  methods:
+    - name: wechat
+      qrcode: /img/wechat.png
+      url: 
+      text: This is a Wechat payment QR
+      color: '#09bb07'
+    - name: paypal
+      qrcode: /img/paypal.png
+      url: https://paypal.me/wardzhou
+      text: This is a paypal payment link
+      color: '#387cbc'
+    - name: alipay
+      qrcode: /img/alipay.png
+      url: 
+      text: This is an Alipay payment link
+      color: '#00a0e9'
   # Payment Methods
   # qrcode, url and text must be set at least one
   # wechat, alipay, paypal and bitcoin has a built-in icon,
@@ -268,20 +292,18 @@ reward:
 # It is possible to use front matter `copyright` to override this setting.
 copyright:
   # Display author, default to `true`
-  # author: true
+  author: true
 
   # Display link, default to `true`
-  # link: false
+  link: false
 
-  # license: Attribution-NonCommercial-NoDerivatives 4.0 International
-  #   (<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\"
-  #   rel=\"external nofollow\" target=\"_blank\">CC BY-NC-ND 4.0</a>)
+  license: Attribution-NonCommercial-NoDerivatives 4.0 International(<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel=\"external nofollow\" target=\"_blank\">CC BY-NC-ND 4.0</a>)
 
   # Display published date, default to `false`
   # published: false
 
   # Display updated date, default to `false`
-  # updated: false
+  updated: true
 
   # Custom text, override above settings
   # custom: my copyright
@@ -321,69 +343,152 @@ data_prefix:
 data_dir:
 
 # Favicon, default to `favicon.ico`
-favicon:
+favicon: favicon.svg
 
 # Google analytics
-# ga: UA-00000000-0
+ga: G-3P92CH3710
 
 # SEO
 seo:
   # Render structured-data in <head>, default to `false`
-  # structured_data: true
-  # Server-side rendering (SSR), default to `false`
-  # ssr: true
-
+  structured_data: true
+  ssr: true
 # PWA
 pwa:
   # Workbox (https://developers.google.com/web/tools/workbox/) is a JavaScript
   # libraries for adding offline support to web apps,
   # disabled by default, remove the hash to enable
-  # workbox:
+   workbox:
   #   # Workbox cdn, uses google by default, below is an example of using alicdn
-  #   cdn: https://g.alicdn.com/kg/workbox/3.3.0/workbox-sw.js
-  #   module_path_prefix: https://g.alicdn.com/kg/workbox/3.3.0/
+     cdn: https://g.alicdn.com/kg/workbox/3.6.3/workbox-sw.js
+     module_path_prefix: https://g.alicdn.com/kg/workbox/3.6.3/
   #   # Expire time in hour, 4 by default, set to 0 to be permanent,
   #   # caches will be forcibly deleted the next time the site is updated.
-  #   expire: 4
+     expire: 0
   #   # The worker script name, `sw.js` by default
-  #   name: sw.js
+     name: sw.js
   #   # Custom rules
-  #   rules:
-  #     - name: jsdelivr
-  #       strategy: staleWhileRevalidate
-  #       regex: https://cdn\\.jsdelivr\\.net
-  #     - name: gtm
-  #       strategy: staleWhileRevalidate
-  #       regex: https://www\\.googletagmanager\\.com\?id=.*
-  #     - name: gravatar
-  #       strategy: staleWhileRevalidate
-  #       regex: https://www\\.gravatar\\.com
-  #     - name: theme
-  #       strategy: staleWhileRevalidate
-  #       regex: /.*\\.(?:js|css|woff2|png|jpg|gif)$
-  #     - name: cdn
-  #       strategy: staleWhileRevalidate
-  #       regex: https://cdn\\.yourdomain\\.com
-  #     - name: json
-  #       strategy: cacheFirst
-  #       regex: your_data_prefix/.*\\.json
-
+     rules:
+       - name: jsdelivr
+         strategy: staleWhileRevalidate
+         regex: https://cdn\\.jsdelivr\\.net
+       - name: gtm
+         strategy: staleWhileRevalidate
+         regex:  https://www\\.googletagmanager\\.com\?id=.*
+       - name: gravatar
+         strategy: staleWhileRevalidate
+         regex: https://www\\.gravatar\\.com
+       - name: theme
+         strategy: staleWhileRevalidate
+         regex: /.*\\.(?:js|css|woff2|png|jpg|gif)$
+       - name: cdn
+         strategy: staleWhileRevalidate
+         regex: https://cdn\\.wardzhou\\.art
+       - name: json
+         strategy: cacheFirst
+         regex: your_data_prefix/.*\\.json
+       - name: custom
+         strategy: staleWhileRevalidate
+         regex: /custom/.*
+       - name: img
+         strategy: staleWhileRevalidate
+         regex: /img/.*
   # manifest.json
-  # manifest:
-  #   short_name:
-  #   name:
-  #   start_url: /
-  #   theme_color: '#2a2b33'
-  #   background_color: '#2a2b33'
-  #   icons:
-  #     - src: icon-194x194.png
-  #       sizes: 194x194 512x512
-  #       type: image/png
-  #     - src: icon-144x144.png
-  #       sizes: 144x144
-  #       type: image/png
+   manifest:
+     short_name: Birch
+     name: 白桦 Birch
+     start_url: /
+     theme_color: '#6699CC'
+     background_color: '#6699CC'
+     icons:
+       - src: img/512.png
+         sizes: 512x512
+         type: image/png  
+         purpose: maskable any
+       - src: img/ico.svg
+         sizes: 512x512
+         type: image/svg 
+         purpose: maskable any
+       - src: img/128.png
+         sizes: 128x128
+         type: image/png
+       - src: img/144.png
+         sizes: 144x144
+         type: image/png
+       - src: img/192.png
+         sizes: 192x192
+         type: image/png
+       - src: img/256.png
+         sizes: 256x256
+         type: image/png               
+     display: fullscreen
 
 # Plugins
+plugins:
+#<link href="vintage-popup.min.css" rel="stylesheet">
+#<link href="popup-material-theme.min.css" rel="stylesheet">
+#  - lib/font-awesome/css/font-awesome.min.css
+#  - //netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+#  - /custom/temp.css
+  # - //cdn1.lncld.net/static/js/3.0.4/av-min.js
+  # - //unpkg.com/valine/dist/Valine.min.js
+    # - //static.runoob.com/assets/qrcode/qrcode.min.js 
+ # - //cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js
+  - cipher: 
+        placeholder: 逆风如解意
+        excerpt: 逆风如解意
+  - //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js
+  - /custom/theme_asset.js
+  - /custom/theme.js
+  - /custom/qrcode.min.js 
+  - /custom/vintage-popup.min.css
+  - /custom/popup-material-theme.min.css
+  - /custom/vintage-popup.min.js
+  - position: sidebar
+    template: |  
+        <is-palette2></is-palette2>
+        <script type="text/javascript" src="custom/typed.min.js"></script> 
+        <script type="text/javascript" src="custom/typer.js"></script> 
+        <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>    
+  - position: [post, page]
+    template: |
+      <link href="custom/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      <script type="text/javascript" src="custom/clipboard.min.js"></script>
+      <script type="text/javascript" src="custom/clipboard-use.js"></script>
+      <link href="custom/clipboard.css" rel="stylesheet">
+  - position: [post, page]
+    template: source/pv.html
+  - position: comments
+    template: source/comArea.html
+     
+
+  # - position: post
+    # template: |  
+          # <script type="text/javascript" src="custom/wordcount.js"></script>      
+  # - tag: link
+    # rel: apple-touch-icon
+    # src: /img/icon-194x194.png
+  # - tag: meta
+    # name: theme-color
+    # content: '#4D8AB3'
+   #- //cdn1.lncld.net/static/js/3.0.4/av-min.js
+   #- //unpkg.com/valine/dist/Valine.min.js
+   # - position: comments
+     # template: |
+        # <div id="vcomments">test</div>
+        # <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+        # <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+        # <script>
+        # new Valine({
+            # el: '#vcomments',
+            # appId: 'QLCzHy5bTsfLQe0o5Q4KUtNI-gzGzoHsz',
+            # appKey: 'EUElGMP580rwPe6ulVMa4CVF',
+            # notify:false, 
+                # verify:false, 
+                # avatar:'mp', 
+                # placeholder: 'just go go'})
+        # </script>
+
 # Inject html snippet to a specified position, Or global inject scripts/styles.
 # The code will take advantage of babel, uglifyjs and html-minifier if possible.
 # Simply run the following command in the root directory of Hexo (not `themes/inside`):
@@ -392,10 +497,22 @@ pwa:
 # ```
 # plugins:
 #   # Dynamic inject html snippet
-#   - position: # `sidebar` | `post` | `page` | `comments` | `avatar`, can be an array
+   # - position: comments
+   # `sidebar` | `post` | `page` | `comments` | `avatar`, can be an array
 
 #     # HTML code
-#     template: |
+     # template: |
+        # <div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+        # <script type="text/javascript" src="http://static.runoob.com/assets/jquery/2.0.3/jquery.min.js"></script>
+        # <script type="text/javascript" src="http://static.runoob.com/assets/qrcode/qrcode.min.js"></script>
+        # <script type="text/javascript">
+            # var qrcode = new QRCode(document.getElementById("qrcode"), 
+            # {
+            # width : 100,
+            # height : 100
+            # });
+            # qrcode.makeCode(window.location.href);
+        # </script>
 #       <script>...</script>
 #     # Or a path relative to theme folder
 #     template: snippets/snippet-1.html
@@ -442,9 +559,3 @@ pwa:
 #         }
 #     # Or a path relative to theme folder
 #     code: snippets/mycss.css
-
-#   # New: Built-in plugins
-#   - cipher
-#   - cipher:
-#       placeholder: Passcode is required
-#       excerpt: Content encrypted
