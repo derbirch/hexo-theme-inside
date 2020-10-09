@@ -21,7 +21,7 @@ appearance:
   # 'url(//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png) #f5f7fa'
 
   # Maximum width of content
-  content_width: 850
+  content_width: 800
 
   # Fonts
   font:
@@ -364,7 +364,7 @@ pwa:
      module_path_prefix: https://g.alicdn.com/kg/workbox/3.6.3/
   #   # Expire time in hour, 4 by default, set to 0 to be permanent,
   #   # caches will be forcibly deleted the next time the site is updated.
-     expire: 0
+     expire: 4
   #   # The worker script name, `sw.js` by default
      name: sw.js
   #   # Custom rules
